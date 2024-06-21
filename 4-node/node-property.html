@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Node JS DOM</title>
+    </head>
+    <body>
+        <ul id="menu">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+        <ul id="menu1">
+            <li id="first1">First</li><li id="second1">Second</li><li id="third1">Third</li>
+        </ul>
+        <script>
+            /**
+             * Node Property.
+             */
+            {
+                const menu = document.getElementById("menu");
+                console.info(menu);
+                console.info(menu.children);
+                console.info(menu.childNodes);
+
+                const second = document.getElementById("second");
+                console.info(second);
+                console.info(second.textContent);
+                console.info(second.previousSibling);
+                console.info(second.nextSibling);
+            }
+
+            // Coba-Coba
+            console.info(`Coba-Coba.`);
+            {
+                const menu = document.getElementById("menu1");
+                console.info(menu);
+                console.info(menu.children);
+                console.info(menu.childNodes);
+
+                const second = document.getElementById("second1");
+                console.info(second);
+                console.info(second.textContent);
+                console.info(second.previousSibling);
+                console.info(second.nextSibling);
+            }
+        </script>
+    </body>
+</html>
