@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Attribute JS DOM</title>
+    </head>
+    <body>
+        <img src="/7-attribute/kars.jpg" alt="Mobil F1 RedBull" id="logo" />
+        <img id="logo1" />
+        <img id="logo2" />
+        <script>
+            /**
+             * Attribute
+             */
+            {
+                const logo = document.getElementById("logo");
+                const src = logo.getAttributeNode("src");
+
+                console.info(src.name);
+                console.info(src.value);
+            }
+
+            /**
+             * Attribute Value
+             */
+            {
+                const logo = document.getElementById("logo");
+                const src = logo.getAttribute("src");
+
+                console.info(src);
+            }
+
+            /**
+             * Membuat Attribute
+             */
+            {
+                const logo = document.getElementById("logo1");
+                const src = document.createAttribute("src");
+
+                src.value = "/7-attribute/kars-2021.jpg";
+
+                logo.setAttributeNode(src);
+                console.info(logo.getAttributeNode("src"));
+                console.info(logo);
+
+                // Cara Ke 2.
+                {
+                    const logo = document.getElementById("logo2");
+                    logo.setAttribute("src", "/7-attribute/kars-2021.jpg");
+                    console.info(logo);
+                }
+            }
+        </script>
+    </body>
+</html>
