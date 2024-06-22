@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Node List JS DOM</title>
+    </head>
+    <body>
+        <ul id="menu1">
+            <li id="item1" class="item1">menu 1</li>
+            <li id="item2" class="item2">menu 2</li>
+            <li id="item3" class="item3">menu 3</li>
+            <li id="item4" class="item4">menu 4</li>
+            <li id="item5" class="item5">menu 5</li>
+            <li id="item6" class="item6">menu 6</li>
+        </ul>
+        
+        <ul id="menu2">
+            <li id="item1" class="item1">Arief</li>
+            <li id="item2" class="item2">Karditya</li>
+            <li id="item3" class="item3">Hermawan</li>
+        </ul>
+        
+        <script>
+            /**
+             * Nodelist
+             */
+            const nodeList = document.querySelectorAll("li");
+            console.info(nodeList);
+
+            const menu1 = document.getElementById("menu1").childNodes;
+            console.info(menu1);
+
+            const menu2 = document.getElementById("menu2").childNodes;
+            console.info(menu2);
+        </script>
+    </body>
+</html>
