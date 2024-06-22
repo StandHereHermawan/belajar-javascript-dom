@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Element JS DOM</title>
+    </head>
+    <body>
+        <h1 id="title"></h1>
+        <p id="description"></p>
+        <div id="content" class="content">
+            <h1 id="title" class="title">This is Title</h1>
+            <p id="description" class="description">
+                This is Description. Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Architecto cupiditate et aperiam, repudiandae
+                est odit rem consequuntur perferendis quam quaerat, autem ipsam,
+                optio accusantium blanditiis. Laborum qui quidem tenetur maxime.
+            </p>
+        </div>
+        <script>
+            /**
+             * Element
+             */
+            {
+                const title = document.getElementById("title");
+                title.textContent = "Belajar JavaScript DOM";
+
+                const description = document.getElementById("description");
+                description.textContent =
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores quaerat nihil blanditiis natus magnam ducimus aperiam, sapiente unde quae distinctio. Provident optio ratione, laboriosam atque accusantium natus libero dolores?";
+            }
+            /**
+             * Element Property
+             */
+
+            {
+                const content = document.getElementById("content");
+                console.info(content.id);
+                console.info(content.className);
+                console.info(content.tagName);
+            }
+
+            /**
+             * Element Method
+             */
+            {
+                const description = document.getElementById("description");
+                const title = document.getElementById("title");
+
+                description.remove();
+                title.remove();
+            }
+
+            /**
+             * Membuat element.
+             */
+            const content = document.getElementById("content");
+
+            const title = document.createElement("h1");
+            title.textContent = "Belajar JavaScript Document Object Model";
+            content.appendChild(title);
+
+            const description = document.createElement("p");
+            description.textContent =
+                "Selamat Belajar JavaScript DOM. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores quaerat nihil blanditiis natus magnam ducimus aperiam, sapiente unde quae distinctio. Provident optio ratione, laboriosam atque accusantium natus libero dolores?";
+            content.appendChild(description);
+        </script>
+    </body>
+</html>
