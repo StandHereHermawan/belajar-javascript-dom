@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event Handler JS DOM</title>
+    </head>
+    <body>
+        <input type="button" id="clickMe" value="Click Me" />
+        <script>
+            /**
+             * Global Event Handler
+             */
+            {
+                const clickMe = document.getElementById("clickMe");
+                clickMe.onclick = function () {
+                    clickMe.setAttribute("value", "You Already Click Me");
+                    console.log("Button di click baris ke 18.");
+                };
+
+                clickMe.onclick = function () {
+                    clickMe.setAttribute("value", "You Already Click Me");
+                    console.log("Button di click baris ke 23.");
+                };
+            }
+        </script>
+    </body>
+</html>
