@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Node JS DOM</title>
+    </head>
+    <body>
+        Arief Karditya Hermawan
+        <script>
+            /**
+             * Text Node
+             */
+            {
+                const text = document.body.firstChild;
+                console.info(text);
+                console.info(text.wholeText);
+            }
+
+            /**
+             * Membuat Text Node
+             */
+            {
+                const text = document.createTextNode("Arief Karditya Hermawan");
+                document.body.appendChild(text);
+            }
+        </script>
+    </body>
+</html>
