@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>InnerText dan InnerHTML JS DOM</title>
+    </head>
+    <body>
+        <p id="content">
+            <script>
+                console.info("Hello World");
+            </script>
+            <b>Arief</b> Karditya <i>Hermawan</i>
+        </p>
+        <article id="article-content"></article>
+        <script>
+            /**
+             * Text Content dan Inner Text
+             */
+            {
+                const content = document.getElementById("content");
+                console.info(content.textContent);
+                console.info(content.innerText);
+            }
+
+            /**
+             * Inner HTML
+             */
+            {
+                const content = document.getElementById("content");
+                console.info(content.textContent);
+                console.info(content.innerHTML);
+            }
+
+            /**
+             * Mengubah Element dengan Inner HTML.
+             */
+            {
+                const content = document.getElementById("article-content");
+                content.innerHTML =
+                    "<h1>This is Title</h1><p>This is Description. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui numquam excepturi illo facere ut possimus iusto quam mollitia, minus aperiam debitis voluptas repellendus totam vero autem necessitatibus id similique deleniti.</p>";
+            }
+        </script>
+    </body>
+</html>
