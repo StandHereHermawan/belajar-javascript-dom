@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NodeType JS DOM</title>
+    </head>
+    <body>
+        Arief Karditya Hermawan
+        <!-- Hello World -->
+        <h1>Ini Title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            possimus deserunt repellendus in eligendi obcaecati qui sint
+            exercitationem molestiae error autem enim voluptatibus laboriosam,
+            perferendis hic quis suscipit labore facere.
+        </p>
+        <script>
+            // Menggunakan Function forEach.
+            console.info(`For Each`);
+            {
+                const nodeList = document.body.childNodes;
+                nodeList.forEach((node) => {
+                    console.info(`${node} : ${node.nodeType}`);
+                });
+            }
+
+            // Menggunakan For of.
+            console.info(`For of`);
+            {
+                const nodeList = document.body.childNodes;
+                for (const node of nodeList) {
+                    console.info(`${node} : ${node.nodeType}`);
+                }
+            }
+        </script>
+    </body>
+</html>
